@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .wrapper-chat{
+        width: 300px;
+        margin: auto;
+    }
+    .login-box{
+        width: inherit;
+    }
+    .login-box h1{
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .login-box input{
+      width: inherit;
+      margin-top: 10px;
+       
+    }
+    .login-box button{
+      width: inherit;
+      margin-top: 5px;
+       
+    }
+    .chat-box {
+        width: inherit;
+        margin-top: 5px;
+        text-align: end;
+    }
+    .chat-box p{
+        width: inherit;
+        height: 200px;
+        border: 1px solid black;
+        text-align: start;
+    }
+    .chat-box input{
+        margin-top: 5px;
+
+    }
+    .hide{
+        display: none !important;
+    }
+  
+</style>
+<body>
+   <div class="wrapper-chat">
+     <div class="login-box ">
+        <h1>Login</h1>
+        <input type="text" id="user" placeholder="Enter Your Name"><br>
+        <button id="login">Login</button>
+     </div>
+     
+     <div class="chat-box hide">
+        <p class="msg_box"></p>
+       
+            <input type="text" id="message">
+        <button id="send">Send</button>
+       
+        
+     </div>
+
+     <div>
+        <button id="start_game">Start Game</button>
+        <button id="start_book">Open Book</button>
+     </div>
+   </div>
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
